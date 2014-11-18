@@ -1,0 +1,207 @@
+object Form1: TForm1
+  Left = 325
+  Height = 521
+  Top = 161
+  Width = 1030
+  Caption = 'Form1'
+  ClientHeight = 521
+  ClientWidth = 1030
+  LCLVersion = '1.0.10.0'
+  object Label1: TLabel
+    Left = 32
+    Height = 18
+    Top = 15
+    Width = 80
+    Caption = 'Constantes '
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 18
+    Top = 56
+    Width = 64
+    Caption = 'Lambda1'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 32
+    Height = 18
+    Top = 96
+    Width = 64
+    Caption = 'Lambda2'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 32
+    Height = 18
+    Top = 144
+    Width = 140
+    Caption = 'Condiciones iniciales'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 32
+    Height = 18
+    Top = 177
+    Width = 27
+    Caption = 'x(0)'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 32
+    Height = 18
+    Top = 217
+    Width = 26
+    Caption = 'y(0)'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 32
+    Height = 18
+    Top = 257
+    Width = 26
+    Caption = 'z(0)'
+    ParentColor = False
+  end
+  object lambda1: TFloatSpinEdit
+    Left = 120
+    Height = 27
+    Top = 56
+    Width = 138
+    Increment = 0.1
+    MaxValue = 100
+    MinValue = 0
+    TabOrder = 0
+    Value = 1
+  end
+  object lambda2: TFloatSpinEdit
+    Left = 120
+    Height = 27
+    Top = 96
+    Width = 138
+    Increment = 0.1
+    MaxValue = 100
+    MinValue = 0
+    TabOrder = 1
+    Value = 1
+  end
+  object x0: TFloatSpinEdit
+    Left = 120
+    Height = 27
+    Top = 177
+    Width = 138
+    Increment = 0.1
+    MaxValue = 100
+    MinValue = 0
+    TabOrder = 2
+    Value = 0
+  end
+  object y0: TFloatSpinEdit
+    Left = 120
+    Height = 27
+    Top = 217
+    Width = 138
+    Increment = 0.1
+    MaxValue = 100
+    MinValue = 0
+    TabOrder = 3
+    Value = 0
+  end
+  object z0: TFloatSpinEdit
+    Left = 120
+    Height = 27
+    Top = 257
+    Width = 138
+    Increment = 0.1
+    MaxValue = 100
+    MinValue = 0
+    TabOrder = 4
+    Value = 0
+  end
+  object grafico: TChart
+    Left = 416
+    Height = 352
+    Top = 32
+    Width = 576
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    ParentColor = False
+    object Xanalitica: TLineSeries
+      LinePen.Color = clRed
+    end
+    object Yanalitica: TLineSeries
+      LinePen.Color = clBlue
+    end
+    object Zanalitica: TLineSeries
+      LinePen.Color = clLime
+    end
+    object serieXad: TLineSeries
+      LineType = ltNone
+      ShowPoints = True
+    end
+  end
+  object xtanalitica: TButton
+    Left = 32
+    Height = 29
+    Top = 328
+    Width = 153
+    AutoSize = True
+    Caption = 'Graficar x(t) analítica'
+    OnClick = xtanaliticaClick
+    TabOrder = 6
+  end
+  object limpiar: TButton
+    Left = 672
+    Height = 29
+    Top = 392
+    Width = 116
+    AutoSize = True
+    Caption = 'Limpiar Gráfico'
+    OnClick = limpiarClick
+    TabOrder = 7
+  end
+  object ytanalitica: TButton
+    Left = 32
+    Height = 29
+    Top = 360
+    Width = 152
+    AutoSize = True
+    Caption = 'Graficar y(t) analítica'
+    OnClick = ytanaliticaClick
+    TabOrder = 8
+  end
+  object ztanalitica: TButton
+    Left = 32
+    Height = 29
+    Top = 392
+    Width = 152
+    AutoSize = True
+    Caption = 'Graficar z(t) analítica'
+    OnClick = ztanaliticaClick
+    TabOrder = 9
+  end
+  object xadelantado: TButton
+    Left = 208
+    Height = 29
+    Top = 328
+    Width = 149
+    AutoSize = True
+    Caption = 'x(t) Esq. Adelantado'
+    OnClick = xadelantadoClick
+    TabOrder = 10
+  end
+end
